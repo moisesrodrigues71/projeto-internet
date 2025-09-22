@@ -112,3 +112,41 @@ main p {
     font-weight: normal;
 
 }
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 1.5em;
+}
+
+section > p {
+    padding-bottom: 2em;
+}
+
+section.imagem {
+    background-color: rgba(0, 0, 0, 0.068);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.137);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.imagem > p {
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.212);
+    text-shadow: 2px 2px 1.5px black;
+}
+
+section#img1 {
+    background-image: url('../fotos/imagem-1.jpg');
+    background-position: center center;
+}
+
+section#img2 {
+    background-image: url('../fotos/imagem-2.jpg');
+    background-position: right center;
+}
