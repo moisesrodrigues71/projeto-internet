@@ -12,6 +12,7 @@
     --cor2: #D9D9D9;
     --cor3: #A68077;
     --cor4: #734040;
+    --cor5:rgba(0, 174, 255, 0.685);
 
 
     --fonte1: "Bebas Neue", sans-serif;
@@ -32,7 +33,7 @@
  }
 
  header {
-    background-image: linear-gradient(to bottom, var(--cor0), var(--cor2));
+    background-image: linear-gradient(to bottom, var(--cor0), var(--cor5));
     color: white;
     text-align: center;
  }
