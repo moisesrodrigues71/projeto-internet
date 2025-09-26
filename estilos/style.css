@@ -90,3 +90,9 @@ section#img1 {
 section#img2 {
     background-image: url('../fotos/imagem-3.jpg');
 }
+
+@media (max-width: 768px) {
+    section.imagem {
+        background-attachment: scroll;
+    }
+}
