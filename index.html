@@ -39,5 +39,11 @@
             <p>Desde então, a internet cresceu de forma impressionante, tornando-se essencial para a <strong>comunicação, o trabalho, a educação e o lazer</strong>, transformando profundamente a sociedade e a vida cotidiana.</p>
         </div>
     </section>
+    <script>
+        window.addEventListener("scroll", function()) {
+            const scrolled = window.scrolly;
+            document.querySelector("section.imagem").style.backgroundPositionY= -(scrolled * 0.4) + "px";
+        }
+    </script>
 </body>
 </html>
