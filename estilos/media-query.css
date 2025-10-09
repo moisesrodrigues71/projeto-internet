@@ -1,29 +1,8 @@
 @charset "UTF-8";
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-    body, html {
-        background-image: linear-gradient(to top, var(--cor5), var(--cor2));
-    }
-    section {
-        width: 90vw;
-        padding: 5px;
-        margin: auto;
-        margin-bottom: 10px;
-        text-align: justify;
-       
-    }
-
-    div > p {
-        height: 100%;
-        width: 90vw;
-        text-align: justify;
-        margin: 8px;
-        border: 2px solid rgba(0, 0, 0, 0.014);
-    }
-}
+  
 
 @media screen and (min-width: 992px) {
-    body, html {
-        background-image: linear-gradient(to top, var(--cor2), var(--cor5));
-    }
+   
 }
