@@ -73,6 +73,7 @@ main.normal {
 }
 
 article > p {
+    
     width: 90vw;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2em;
@@ -109,12 +110,13 @@ article > p > strong{
 main#conteudo {
     color: white;
     padding: 10px;
+   
 }
 
 article.parallax {
+    width: 95vw;
+    height: 95vh;
     display: inline-block;
-    height: 100vh;
-   
     background-repeat: no-repeat;
     background-size: cover;
 }
