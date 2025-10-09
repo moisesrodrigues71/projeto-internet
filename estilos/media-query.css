@@ -1,8 +1,53 @@
 @charset "UTF-8";
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
+    body, html {
+        height: 100vh;
+        width: 100vw;
+    }
+    main.normal {
+        width: 90vw;
+        margin: auto;
+        padding: 10px;
+    }
+    article > p {
+        width: 90vw;
+        text-align: justify;
+        margin-left: 2px;
+        padding: 8px;
+    }
+
+    article.parallax {
+        background-attachment: fixed;
+        display: inline-block;
+        background-size: cover;
+    }
+}
   
 
 @media screen and (min-width: 992px) {
-   
+   body, html {
+    height: 80vh;
+    width: 100vw;
+   }
+
+   main.normal {
+    width: 95vw;
+    margin: auto;
+    padding-top: 15px;
+    margin-bottom: 8px;
+   }
+
+   article > p {
+    
+    width: 100%;
+    text-align: justify;
+    padding: 2px;
+   }
+
+   article.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    display: block;
+   }
 }
