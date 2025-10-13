@@ -61,5 +61,17 @@
             }
         }
     </script>
+
+    <script>
+        const parallax = document.querySelector('.parallax');
+        window.addEventListener('scroll', function()) {
+            lef scrollTop = window.pageXOffset;
+
+            
+            lef velocidade = 0.4;
+
+            parallax.style.backgroundPositionY = -(scrollTop * velocidade) + 'px';
+        }
+    </script>
 </body>
 </html>
