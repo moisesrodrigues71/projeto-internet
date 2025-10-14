@@ -12,6 +12,7 @@
     }
     article > p {
         width: 90vw;
+         font-size: clamp(1rem, 2.5vw, 1.3rem);
         text-align: justify;
         margin-left: 2px;
         padding: 8px;
@@ -32,15 +33,15 @@
    }
 
    main.normal {
-    width: 95vw;
-    margin: auto;
-    padding-top: 15px;
+    width: min(95vw, 1200px);
+    margin: 20px auto;
+   padding: clamp(10px, 2vw, 30px);
     margin-bottom: 8px;
    }
 
    article > p {
     
-    
+     font-size: clamp(1rem, 2.5vw, 1.3rem);
     width: 100%;
     text-align: justify;
     padding: 2px;
