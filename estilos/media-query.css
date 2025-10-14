@@ -40,6 +40,7 @@
 
    article > p {
     
+    
     width: 100%;
     text-align: justify;
     padding: 2px;
@@ -48,6 +49,7 @@
    article.parallax {
     background-attachment: fixed;
     background-size: cover;
-    display: block;
+    display: flex;
+    
    }
 }
