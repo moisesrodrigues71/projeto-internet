@@ -63,14 +63,15 @@
     </script>
 
     <script>
-        const parallax = document.querySelector('.parallax');
         window.addEventListener('scroll', function()) {
-            lef scrollTop = window.pageXOffset;
+            const parallaxElements = document.querySelectorAll('.parallax');
 
-            
-            lef velocidade = 0.4;
+            parallaxElements.forEach(el => {
+                let speed = el.getAttribute('data-speed');
+                let yPos = window.scrolly * speed;
+                el.style.backgroundPosition = `center calc(50% + ${yPos}px)`;
+            });
 
-            parallax.style.backgroundPositionY = -(scrollTop * velocidade) + 'px';
         }
     </script>
 </body>
