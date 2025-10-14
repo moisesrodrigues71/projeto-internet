@@ -60,19 +60,19 @@
                 itens.style.display = 'block'
             }
         }
-    </script>
-
-    <script>
-        window.addEventListener('scroll', function()) {
-            const parallaxElements = document.querySelectorAll('.parallax');
-
-            parallaxElements.forEach(el => {
-                let speed = el.getAttribute('data-speed');
-                let yPos = window.scrolly * speed;
-                el.style.backgroundPosition = `center calc(50% + ${yPos}px)`;
+        
+            window.addEventListener('scroll', function() {
+                const parallaxElements = document.querySelectorAll('article.parallax');
+                parallaxElements.forEach(el => {
+                    let speed = el.getAttribute('data-speed');
+                    let yPos = window.scrolly * speed;
+                    el.style.backgroundPosition = `center calc(50% + ${yPos}px)`;
+                });
             });
-
-        }
+       
     </script>
+
+    
+        
 </body>
 </html>
