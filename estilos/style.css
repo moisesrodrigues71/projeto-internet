@@ -173,7 +173,7 @@ menu > ul > li > a:hover {
 
 @media (max-width: 768px) {
     article.parallax {
-        background-attachment: scroll;
+        background-attachment: fixed;
     }
 }
 
