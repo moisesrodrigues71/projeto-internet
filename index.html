@@ -61,14 +61,26 @@
             }
         }
         
-            window.addEventListener('scroll', function() {
-                const parallaxElements = document.querySelectorAll('article.parallax');
-                parallaxElements.forEach(el => {
-                    let speed = el.getAttribute('data-speed');
-                    let yPos = window.scrolly * speed;
-                    el.style.backgroundPosition = `center calc(50% + ${yPos}px)`;
-                });
-            });
+           document.addEventListener("DOMContentLoaded", () => {
+  const elementos = document.querySelectorAll("article > h1, article > h2, article > p");
+
+  const observer = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+      if (entrada.isIntersecting) {
+        const elementosVisiveis = [...entrada.target.parentElement.querySelectorAll("h1, h2, p")];
+        elementosVisiveis.forEach((el, index) => {
+          if (!el.classList.contains("visible")) {
+            setTimeout(() => {
+              el.classList.add("visible");
+            }, index * 200); // 200ms de atraso entre cada elemento
+          }
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elementos.forEach((el) => observer.observe(el));
+});
        
     </script>
 

@@ -15,10 +15,12 @@
     --cor5:rgba(0, 174, 255, 0.685);
 
 
+
     --fonte1: "Bebas Neue", sans-serif;
     --fonte2: "Barlow Condensed", sans-serif;
     --fonte3: "Inconsolata", monospace;
 }
+
  * {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
@@ -35,31 +37,52 @@ body, html {
 
 header {
     width: 100vw;
+    height: 60vh;
     padding: 10px;
     text-align: center;
-    background-image: linear-gradient(to bottom, var(--cor2), var(--cor5));
     color: white;
     margin-bottom: 10px;
     border-radius: 8px;
+    background-image: url('../fotos/imagem-chat1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     
 }
 
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.075);
+    border-radius: 8px;
+    z-index: 0;
+}
+
 header > p {
-    padding-bottom: 50px;
+    
     font-family: var(--fonte1);
     font-size: 1.2em;
-    padding: 4px;
-    border-radius: 2px;
-    color: black;
+    padding: 8px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    color: white;
 
 }
 
 header > h1 {
     font-family: var(--fonte1);
     font-size: 10vw;
-    color: black;
+    color: white;
     padding-top: 50px;
     font-variant: small-caps;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 
 }
 
@@ -193,3 +216,45 @@ article#img3 {
     background-position: center center;
 }
 
+@keyframes aparecerHeader {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    animation: aparecerHeader 1.5s ease-out;
+}
+
+/* ===== Animação para o conteúdo (rolagem + atraso) ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estado inicial (oculto até entrar na tela) */
+article > p,
+article > h1,
+article > h2 {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Quando entra na tela */
+article > p.visible,
+article > h1.visible,
+article > h2.visible {
+    animation: fadeInUp 1s ease forwards;
+}
